@@ -7,7 +7,6 @@ import numpy as np
 from .decoder import DECODER_REGISTRY
 from .encoder import ENCODER_REGISTRY
 from .loss import LOSS_REGISTRY
-from utils.utils import index_points
 from mmengine import Registry
 
 NETWORK_REGISTRY = Registry("NETWORK")

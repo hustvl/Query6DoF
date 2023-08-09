@@ -11,7 +11,6 @@ from tqdm import tqdm
 import _pickle as cPickle
 import torch
 import torch.nn.functional as F
-import torchvision.transforms as transforms
 from mmengine import Config,DictAction
 from network import NETWORK_REGISTRY
 from utils import load_depth, get_bbox, compute_mAP, plot_mAP
@@ -64,9 +63,6 @@ result_dir='results/eval_real'
 xmap = np.array([[i for i in range(640)] for j in range(480)])
 ymap = np.array([[j for i in range(640)] for j in range(480)])
 norm_scale = 1000.0
-transform = transforms.Compose([transforms.ToTensor(),
-                                             transforms.Normalize(mean=[0.485, 0.456, 0.406],
-                                                                  std=[0.229, 0.224, 0.225])])
 
 @torch.no_grad()
 def detect():
