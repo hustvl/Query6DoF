@@ -178,7 +178,6 @@ def main_worker(rank, world_size, dist_url, final_output_dir, cfg):
                 # if cfg.CHANGE_SCHEDULE:
                 #     lr_scheduler.step()
                 #     print('lr',optimizer.state_dict()['param_groups'][0]['lr'])
-                print(lr_scheduler.state_dict())
             if rank==0:
                 logger.info("=> loaded checkpoint '{}' (epoch {})".format(checkpoint_file, checkpoint['epoch']))
 
@@ -200,8 +199,6 @@ def main_worker(rank, world_size, dist_url, final_output_dir, cfg):
         if not is_iter:
             lr_scheduler.step()
 
-        if rank==0:
-            print(lr_scheduler.state_dict())
         perf_indicator = epoch
         if perf_indicator >= best_perf:
             
