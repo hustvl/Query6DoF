@@ -1,6 +1,9 @@
 # Query6DoF: Learning Sparse Queries as Implicit Shape Prior for Category-Level 6DoF Pose Estimation
 This is the PyTorch implemention of ICCV'23 paper Query6DoF: Learning Sparse Queries as Implicit Shape Prior for Category-Level 6DoF Pose Estimation
 
+# Abstract
+> Category-level 6DoF object pose estimation intends to estimate the rotation, translation, and size of unseen objects. Many previous works use point clouds as a pre-learned shape prior to overcome intra-category variability. The shape prior is deformed to reconstruct instances' point clouds in canonical space and to build dense 3D-3D correspondences between the observed and reconstructed point clouds. However, in these methods, the pre-learned shape prior is not jointly optimized with estimation networks, and they are trained with a surrogate objective. In this paper, we propose a novel 6D pose estimation network based on a series of category-specific sparse queries that serve as the representation of the shape prior. Each query represents a shape component, and these queries are learnable embeddings that can be optimized together with the estimation network according to the point cloud reconstruction loss, the normalized object coordinate loss, and the 6d pose estimation loss. Our proposed network adopts a deformation-and-matching paradigm with attention, where the queries dynamically extract features from regions of interest using the attention mechanism and then directly regress results. Furthermore, our method reduces computation overhead through the sparseness of the queries and the incorporation of a lightweight global information injection block. With the aforementioned design, our method achieves state-of-the-art (SOTA) pose estimation performance on the NOCS dataset.
+
 # Requirements
 - Linux (tested on Ubuntu 16.04)
 - Python 3.8
