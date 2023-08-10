@@ -75,5 +75,5 @@ if VIS:
 
 
 OPTIMIZER = dict(type='AdamW', lr=0.0001, weight_decay=1e-4)
-SCHEDULER = dict(type='CosineAnnealingLR', T_max=422350, eta_min=1e-6, last_epoch=-1, verbose=False)
-TRAIN = dict(BEGIN_EPOCH=0, END_EPOCH=51, SAVE_EPOCH_STEP=5, VIS=False)
+SCHEDULER = dict(type='CosineAnnealingLR', T_max=422400, eta_min=1e-6, last_epoch=-1, verbose=False)
+TRAIN = dict(BEGIN_EPOCH=0, END_EPOCH=101, SAVE_EPOCH_STEP=10, VIS=False)
