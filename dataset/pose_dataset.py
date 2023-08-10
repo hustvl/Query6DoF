@@ -44,26 +44,20 @@ class PoseDataset(data.Dataset):
         model_file_path = ['obj_models/camera_train.pkl', 'obj_models/real_train.pkl',
                            'obj_models/camera_val.pkl', 'obj_models/real_test.pkl']
         if mode == 'train':
-            del img_list_path[3:]
+            del img_list_path[2:]
             del model_file_path[2:]
         else:
-            del img_list_path[:3]
+            del img_list_path[:2]
             del model_file_path[:2]
         if source == 'CAMERA':
-            del img_list_path[-1]
             del img_list_path[-1]
             del model_file_path[-1]
         elif source == 'Real':
             del img_list_path[0]
-            # del img_list_path[-1]
             del model_file_path[0]
         elif source=='CAMERA+Real':
             del img_list_path[2:]
-        else:
-            # only use Real to test when source is CAMERA+Real
-            if mode == 'test':
-                del img_list_path[0]
-                del model_file_path[0]
+
 
         img_list = []
         subset_len = []
