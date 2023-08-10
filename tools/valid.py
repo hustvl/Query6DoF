@@ -74,6 +74,8 @@ def detect():
     opt = Config.fromfile(opt.cfg)
     assert not opt.train
     assert opt.DATA in ['val', 'real_test']
+    opt.MODEL.decoder.training=False
+    opt.MODEL.training=False
     if opt.DATA == 'val':
         result_dir = 'results/eval_camera'
         file_path = 'CAMERA/val_list.txt'
