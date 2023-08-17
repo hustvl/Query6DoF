@@ -54,6 +54,7 @@ Then, you can make an evaluation for CAMERA25 using following command.
 python tools/valid.py --cfg config/run_eval_camera.py --gpus 0
 ~~~
 
+You can get running speed at the same time.
 
 # Train
 'tools/train.py' is the main file for training. You can train using the following command.
