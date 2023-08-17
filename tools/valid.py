@@ -64,7 +64,7 @@ xmap = np.array([[i for i in range(640)] for j in range(480)])
 ymap = np.array([[j for i in range(640)] for j in range(480)])
 norm_scale = 1000.0
 
-@torch.no_grad()
+@torch.inference_mode()
 def detect():
     # resume model
     print('use_gt_mask: ',use_gt_mask)
