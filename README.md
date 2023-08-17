@@ -43,7 +43,7 @@ The dataset is organized as follows:
 ~~~
 
 # Evaluation
-Please download our pretrain model [here](https://drive.google.com/file/d/11DKVV6NCgecKoe6Pu9OIXWyiROXhuW3J/view?usp=drive_link) and put it in 'runs/CAMERA+Real/run/model' dictionory. 
+Please download our pretrain model [here](https://drive.google.com/file/d/11DKVV6NCgecKoe6Pu9OIXWyiROXhuW3J/view?usp=drive_link) or pretrain model without linear shaoe augmentation and non-linear shape augmentation [here](https://drive.google.com/file/d/1885sFjQz1v0SL5z92a-3KSZcf2zj5BHg/view?usp=drive_link) and put it in 'runs/CAMERA+Real/run/model' dictionory. 
 
 Then, you can make an evaluation for REAL275 using following command.
 ~~~
