@@ -58,7 +58,6 @@ class PoseDataset(data.Dataset):
         elif source=='CAMERA+Real':
             del img_list_path[2:]
 
-
         img_list = []
         subset_len = []
         for path in img_list_path:

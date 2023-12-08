@@ -43,7 +43,7 @@ The dataset is organized as follows:
 ~~~
 
 # Evaluation
-Please download our pretrain model [here](https://drive.google.com/file/d/11DKVV6NCgecKoe6Pu9OIXWyiROXhuW3J/view?usp=drive_link) or pretrain model without linear shaoe augmentation and non-linear shape augmentation [here](https://drive.google.com/file/d/1885sFjQz1v0SL5z92a-3KSZcf2zj5BHg/view?usp=drive_link) and put it in 'runs/CAMERA+Real/run/model' dictionory. 
+Please download our pretrain model [here](https://drive.google.com/file/d/11DKVV6NCgecKoe6Pu9OIXWyiROXhuW3J/view?usp=drive_link) or pretrain model without linear shape augmentation and non-linear shape augmentation [here](https://drive.google.com/file/d/14pKBxS3FnNei4Lj2yUGgKpO5PAra3mZs/view?usp=drive_link) and put it in 'runs/CAMERA+Real/run/model' dictionory. 
 
 Then, you can make an evaluation for REAL275 using following command.
 ~~~
@@ -58,10 +58,11 @@ You can get running speed at the same time.
 
 # Train
 'tools/train.py' is the main file for training. You can train using the following command.
+
 ~~~
 python tools/train.py --cfg config/run.py --gpus 0,1,2,3
 ~~~
-You can modity the training config.
+This config is for training on 4 gpus with the batch size = 15 on a single gpu, and the total batch size = 60.
 
-# Ackownledgment
+# Acknowledgment
 The dataset is provided by [NOCS](https://github.com/hughw19/NOCS_CVPR2019). Our code is developed based on [Pointnet2.PyTorch](https://github.com/sshaoshuai/Pointnet2.PyTorch) and [SPD](https://github.com/mentian/object-deformnet)
